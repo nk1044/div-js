@@ -1,0 +1,19 @@
+{
+  "name": "divjs",
+  "version": "1.0.0",
+  "description": "A lightweight and modern UI library that provides ready-to-use components, templates, and boilerplates to make web development faster and easier.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeerajKumar-1044/div-js.git#npm-package"
+  },
+  "author": "Neeraj Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NeerajKumar-1044/div-js/issues"
+  },
+  "homepage": "https://github.com/NeerajKumar-1044/div-js/tree/npm-package#readme"
+}
