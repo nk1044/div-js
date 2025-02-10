@@ -1,8 +1,9 @@
 {
-  "name": "divjs",
-  "version": "1.0.0",
+  "name": "trydivjs",
+  "version": "1.0.1",
   "description": "A lightweight and modern UI library that provides ready-to-use components, templates, and boilerplates to make web development faster and easier.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "node index.js"
   },
