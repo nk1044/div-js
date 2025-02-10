@@ -17,8 +17,9 @@ async function downloadFileFromGitHub(githubUrl, fileName) {
     try {
         const fileUrl = `${process.env.FOLDER_PATH}/${githubUrl}`;
         const filePath = path.join(OUTPUT_DIR, fileName);
-
+    
         const response = await axios.get(fileUrl, { responseType: 'arraybuffer' });
+        // console.log(response);
         await ensureOutputDir();
         await fs.writeFile(filePath, response.data);
         const fileData = await fs.readFile(filePath, 'utf-8');
@@ -32,9 +33,8 @@ async function downloadFileFromGitHub(githubUrl, fileName) {
 
 async function CreateComponent(req, res) {
     const { path, name, price } = req.body;
-
-    if (!path || !name || !price) {
-        return res.status(400).json({ message: 'All fields are required' });
+    if([path, name, price].includes(undefined) || [path, name, price].includes('')) {
+        return res.status(400).json('All fields are required');
     }
 
     try {
@@ -56,13 +56,16 @@ async function CreateComponent(req, res) {
 }
 
 async function GetComponentByName(req, res) {
-    const name = req?.params?.name;
+    const name = req?.query?.name;
+    // console.log(req.query);
+    // console.log(name);
     if (!name) {
         return res.status(400).json({ message: 'Component name is required' });
     }
 
     try {
         const component = await Component.findOne({ name: name });
+        // console.log(component);
         if(!component?.path) {
             return res.status(404).json({ message: 'Component path not found' });
         }
