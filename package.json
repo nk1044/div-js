@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/NeerajKumar-1044/div-js/issues"
   },
-  "homepage": "https://github.com/NeerajKumar-1044/div-js/tree/npm-package#readme"
+  "homepage": "https://github.com/NeerajKumar-1044/div-js/tree/npm-package#readme",
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
 }

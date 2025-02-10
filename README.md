@@ -35,6 +35,30 @@ function App() {
 
 <!-- ## Documentation
 For detailed usage and examples, check out our [official documentation](#). -->
+```javascript
+import React, { useEffect, useState } from "react";
+import Ui from "your-package-name";
+
+export default function App() {
+    const [Button01, setButton01] = useState(null);
+
+    useEffect(() => {
+        async function loadComponent() {
+            const Component = await Ui("Button01");
+            setButton01(() => Component);
+        }
+        loadComponent();
+    }, []);
+
+    return (
+        <div>
+            <h1>Dynamic Component Loading</h1>
+            {Button01 ? <Button01 /> : <p>Loading Button01...</p>}
+        </div>
+    );
+}
+
+```
 
 ## Contributing
 We welcome contributions! Feel free to submit issues or open a pull request.
