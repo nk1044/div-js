@@ -58,7 +58,7 @@ async function CreateComponent(req, res) {
 async function GetComponentByName(req, res) {
     const name = req?.query?.name;
     // console.log(req.query);
-    // console.log(name);
+    console.log(name);
     if (!name) {
         return res.status(400).json({ message: 'Component name is required' });
     }
