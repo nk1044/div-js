@@ -1,17 +1,11 @@
-import {Ui} from "./src/app.js";
+import { GetComponent } from "./src/app.js";
 
+class DivUi {
+  constructor(Apikey) {
+    this.Apikey = Apikey;
+  }
 
-function printMsg() {
-  console.log("This is a message from the demo package");
+  GetComponent = GetComponent;
 }
 
-async function loadComponent() {
-  const Component = await Ui("Button01");
-  console.log("Component", Component);
-}
-loadComponent();
-
-export {
-  Ui,
-  printMsg
-}
+export {DivUi};
