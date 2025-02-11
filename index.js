@@ -8,8 +8,5 @@ class DivUi {
 
   GetComponent = GetComponent;
 }
-(async () => {
-  await createUtilsFolder();
-})();
 
 export {DivUi};
