@@ -1,11 +1,14 @@
-import fs, { writeFile } from 'fs/promises';
-import { join, extname } from 'path';
+import fs from 'fs/promises';
+import { join, extname , dirname} from 'path';
 import { mkdir } from "fs/promises";
 import { existsSync } from "fs";
 import axios from 'axios';
+import { createRequire } from "module";
 
 const SERVER_URL = 'http://localhost:9000';
-const projectRoot = process.cwd();
+
+const require = createRequire(import.meta.url);
+const projectRoot = dirname(require.resolve("package.json", { paths: [process.cwd()] }));
 const utilsFolderPath = join(projectRoot, "utils");
 
 async function createUtilsFolder() {
