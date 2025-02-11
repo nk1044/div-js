@@ -3,13 +3,19 @@ import { join, extname , dirname} from 'path';
 import { mkdir } from "fs/promises";
 import { existsSync } from "fs";
 import axios from 'axios';
-import { createRequire } from "module";
+import { fileURLToPath } from "url";
+
 
 const SERVER_URL = 'http://localhost:9000';
 
-const require = createRequire(import.meta.url);
-const projectRoot = dirname(require.resolve("package.json", { paths: [process.cwd()] }));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
+const projectRoot = join(__dirname, "../../../");
 const utilsFolderPath = join(projectRoot, "utils");
+console.log('projectRoot:', projectRoot);
+console.log('utilsFolderPath:', utilsFolderPath);
 
 async function createUtilsFolder() {
     if (!existsSync(utilsFolderPath)) {
