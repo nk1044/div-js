@@ -1,5 +1,5 @@
 import fs from 'fs/promises';
-import { join, extname , dirname} from 'path';
+import { join, extname, dirname } from 'path';
 import { mkdir } from "fs/promises";
 import { existsSync } from "fs";
 import axios from 'axios';
@@ -37,9 +37,9 @@ const fetchData = async (name) => {
         console.log('name:', name);
         const response = await axios.get(`${SERVER_URL}/api/component/get-component?name=${name}`);
         const content = response?.data?.data || '';
-        
+
         // console.log('response:', content);
-        if(!existsSync(utilsFolderPath)){
+        if (!existsSync(utilsFolderPath)) {
             await createUtilsFolder();
         }
         const ext = extname(name) || '.txt';
@@ -54,13 +54,27 @@ const fetchData = async (name) => {
 };
 
 
-function GetScriptContent(){
+function GetScriptContent() {
     const script = `import { DivUi } from "trydivjs";\n\nconst divUi = new DivUi("your_api_key");`
     return script;
 }
 
+async function setFolderStructure(tree, path ) {
+    for (const element of tree) {
+        const newPath = join(path, element.name);
+        if (element.type === "folder") {
+            await fs.mkdir(newPath, { recursive: true });
+            if (element.children) {
+                await setFolderStructure(element.children, newPath);
+            }
+        } else {
+            await fs.writeFile(newPath, element.content, 'utf8');
+        }
+    }
+}
 
-export { 
+
+export {
     fetchData,
     createUtilsFolder,
 };
