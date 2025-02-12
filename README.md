@@ -1,67 +1,114 @@
-# DivJS
+# trydivJS
 
-A lightweight and modern UI library that provides ready-to-use components, templates, and boilerplates to make web development faster and easier.
-
-## Features
-- **Reusable UI Components** – Pre-built elements to speed up development.
-- **Boilerplates** – Ready-to-use code structures for quick setup.
-- **Customizable** – Easily adaptable to fit different design needs.
-- **Lightweight & Fast** – Optimized for performance.
-- **Developer-Friendly** – Simple API and intuitive usage.
+**trydivJS** is a powerful and lightweight UI library designed to simplify web development. It provides a vast collection of ready-to-use components, templates, and boilerplates, enabling developers to accelerate project development with minimal effort.
 
 ---
 
-## Installation
+##  Key Features
 
-### 1️ Prerequisites
-Ensure that **Docker** is installed and running on your machine.
+-  **Pre-built UI Components** – Easily integrate customizable UI elements.
+-  **Optimized Performance** – Lightweight with fast rendering.
+-  **Boilerplates & Templates** – Quick setup with minimal configuration.
+-  **Developer-Friendly** – Intuitive API with simple usage.
+-  **Extensible & Flexible** – Customizable for various design needs.
 
-Run the following command to set up the required environment:
-```sh
-docker run -it -p 9000:9000 neerajkumar1044/divjs:01
-```
-`UPDATE: now you don't need to run the container because it is depolyed on render but you might need to wait upto a minute to download the component or you can just change the backend url in node_modules/trydivjs to http://localhost:9000 and run the container.`
+---
 
-### 2️ Install the Library
-Install **DivJS** via npm:
+##  Installation
+
+### 1️ Install via npm
+
 ```sh
 npm install trydivjs
 ```
 
-### 3️ Usage
+### 2️ Getting Started
 
-####  Automatic File Creation
-- Upon installation, a `script.js` file will be automatically generated inside the `utils/` folder.
+Upon installation, `trydivJS` automatically creates a `utils/` directory in your project root with a `script.js` file inside. This simplifies integration and component management.
 
-####  Import and Use Components
-To use any component, follow these steps:
+####  Importing and Using Components
 
 ```javascript
+// utils/script.js
 import { DivUi } from "trydivjs";
 
-const divUi = new DivUi("your_api_key");
+const divUi = new DivUi();
 
-// Add this line to your script.js
-divUi.GetComponent("Button01");
+// Load a UI component
+divUi.GetComponent("your_component");
 ```
 
-#### Run the Script
-Execute the script file to generate the component:
+Replace `your_component` with the required component name, run your script, and let **trydivJS** do the rest!
+
+####  Running the Script
+
+To generate the component, execute:
+
 ```sh
 node utils/script.js
 ```
 
-A new file named **`Button01.txt`** will be created in the `utils/` folder. Now, you can use this component anywhere in your project.
+This will create a new file **`your_component.txt`** inside the `utils/` folder, ready for use in your project.
 
-#### `Adds new components by just adding a single line of code`
+####  Adding New Components
+
+Simply add a new line to fetch additional components:
+
+```javascript
+// Fetch multiple components
+divUi.GetComponent("Button01");
+divUi.GetComponent("Navbar01");
+divUi.GetComponent("Login01");
+```
+
+---
+
+##  Full Documentation
+
+### Available Components
+
+| Component | Description |
+|-----------|-------------|
+| `Button01` | A customizable button component |
+| `Navbar01` | A responsive navigation bar |
+| `Login01`  | A login form template |
+
+For a complete list of available components and customization options, check our **[official documentation](#)**.
+
+---
+
+##  Customization
+
+Each component is designed to be easily customizable. Modify the generated component files in `utils/` to fit your design preferences.
 
 ---
 
 ##  Contributing
-We welcome contributions! Feel free to **submit issues** or **open a pull request** to improve the library.
+
+We welcome community contributions! If you'd like to enhance **trydivJS**, consider:
+
+- Submitting bug reports
+- Requesting new features
+- Creating a pull request with improvements
+
+For contribution guidelines, refer to our **[CONTRIBUTING.md](#)**.
 
 ---
 
 ##  License
-This project is licensed under the **MIT License**.
+
+This project is distributed under the **MIT License**, allowing open use, modification, and distribution.
+
+---
+
+##  Need Help?
+
+For support and discussions:
+- Open an issue on GitHub
+- Join our developer community
+- Contact us via [email/contact details]
+
+---
+
+**Start Building with trydivJS Today**
 

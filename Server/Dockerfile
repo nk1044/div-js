@@ -11,6 +11,7 @@ COPY models /app/models
 COPY app.js /app/app.js
 COPY routes /app/routes
 COPY controllers /app/controllers
+COPY Output /app/Output
 
 COPY .env /app/.env
 
