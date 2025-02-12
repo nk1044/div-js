@@ -1,34 +1,53 @@
 import { Component } from '../models/component.model.js';
 import fs from 'fs/promises';
-import axios from 'axios';
 import path from 'path';
 
-const OUTPUT_DIR = path.join(process.cwd(), 'output');
+const OUTPUT_DIR = path.join(process.cwd(), 'Output');
 
-async function ensureOutputDir() {
+async function getFileContent(filePath) {
     try {
-        await fs.mkdir(OUTPUT_DIR, { recursive: true });
-    } catch (err) {
-        console.error('Error creating output directory:', err);
+        return await fs.readFile(filePath, "utf8");
+    } catch (error) {
+        console.error("Error reading file:", filePath, error);
+        return null;
     }
 }
 
-async function downloadFileFromGitHub(githubUrl, fileName) {
-    try {
-        const fileUrl = `${process.env.FOLDER_PATH}/${githubUrl}`;
-        const filePath = path.join(OUTPUT_DIR, fileName);
-    
-        const response = await axios.get(fileUrl, { responseType: 'arraybuffer' });
-        // console.log(response);
-        await ensureOutputDir();
-        await fs.writeFile(filePath, response.data);
-        const fileData = await fs.readFile(filePath, 'utf-8');
-        await fs.unlink(filePath);
+async function GetFolderStructure(dirPath) {
+    const folder = {
+        name: path.basename(dirPath),
+        type: "folder",
+        children: [],
+    };
 
-        return fileData;
+    try {
+        const files = await fs.readdir(dirPath, { withFileTypes: true });
+
+        for (const file of files) {
+            const fullPath = path.join(dirPath, file.name);
+
+            if (file.isDirectory()) {
+                const childFolder = await GetFolderStructure(fullPath);
+                folder.children.push(childFolder);
+            } else {
+                const fileContent = await getFileContent(fullPath);
+                if(file.name.includes('.DS_Store')) {
+                    continue;
+                }else{
+                    folder.children.push({
+                        name: file.name,
+                        type: "file",
+                        content: fileContent,
+                    });
+                }
+                
+            }
+        }
     } catch (error) {
-        throw new Error(`Failed to download file: ${error.message}`);
+        console.error("Error reading directory:", dirPath, error);
     }
+
+    return folder;
 }
 
 async function CreateComponent(req, res) {
@@ -57,11 +76,10 @@ async function CreateComponent(req, res) {
 
 async function GetComponentByName(req, res) {
     const name = req?.query?.name;
-    // console.log(req.query);
-    console.log(name);
     if (!name) {
         return res.status(400).json({ message: 'Component name is required' });
     }
+    else console.log(name);
 
     try {
         const component = await Component.findOne({ name: name });
@@ -69,15 +87,14 @@ async function GetComponentByName(req, res) {
         if(!component?.path) {
             return res.status(404).json({ message: 'Component path not found' });
         }
-        const fileContent = await downloadFileFromGitHub(component?.path, `${name}.jsx`);
-
-        return res
-        .status(200)
-        .json({ message: 'Component fetched successfully', data: fileContent });
+        const folderStructure = await GetFolderStructure(`${OUTPUT_DIR}/${component?.path}`);
+        res.send([folderStructure]);
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
 }
+
+
 
 // Export functions
 export {
