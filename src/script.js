@@ -52,16 +52,18 @@ function GetScriptContent() {
     return script;
 }
 
-async function setFolderStructure(tree, path ) {
+async function setFolderStructure(tree, path = '.') {
     for (const element of tree) {
-        const newPath = join(path, element.name);
+        const newPath = String(join(path, element.name));
+        
         if (element.type === "folder") {
             await fs.mkdir(newPath, { recursive: true });
-            if (element.children) {
+
+            if (element.children.length>0) {
                 await setFolderStructure(element.children, newPath);
             }
         } else {
-            await fs.writeFile(newPath, element.content, 'utf8');
+            await fs.writeFile(newPath, element.content || '', 'utf8');
         }
     }
 }
