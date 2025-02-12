@@ -6,7 +6,7 @@ import axios from 'axios';
 import { fileURLToPath } from "url";
 
 
-const SERVER_URL = 'http://localhost:9000';
+const SERVER_URL = 'https://divjs-02.onrender.com';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
