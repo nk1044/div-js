@@ -8,36 +8,59 @@ A lightweight and modern UI library that provides ready-to-use components, templ
 - **Customizable** – Easily adaptable to fit different design needs.
 - **Lightweight & Fast** – Optimized for performance.
 - **Developer-Friendly** – Simple API and intuitive usage.
-<!-- 
+
+---
+
 ## Installation
 
-You can install DivJS via npm:
+### 1️ Prerequisites
+Ensure that **Docker** is installed and running on your machine.
+
+Run the following command to set up the required environment:
 ```sh
-npm install divjs
+docker run -it -p 9000:9000 neerajkumar1044/divjs:01
 ```
 
-Or using yarn:
+### 2️ Install the Library
+Install **DivJS** via npm:
 ```sh
-yarn add divjs
+npm install trydivjs
 ```
 
-## Usage
+### 3️ Usage
 
-Import and use DivJS components in your project:
+####  Automatic File Creation
+- Upon installation, a `script.js` file will be automatically generated inside the `utils/` folder.
 
-```js
-import { Button } from 'divjs';
+####  Import and Use Components
+To use any component, follow these steps:
 
-function App() {
-  return <Button label="Click Me" />;
-}
-``` -->
+```javascript
+import { DivUi } from "trydivjs";
 
-<!-- ## Documentation
-For detailed usage and examples, check out our [official documentation](#). -->
+const divUi = new DivUi("your_api_key");
 
-## Contributing
-We welcome contributions! Feel free to submit issues or open a pull request.
+// Add this line to your script.js
+divUi.GetComponent("Button01");
+```
 
-## License
-This project is licensed under the MIT License.
+#### Run the Script
+Execute the script file to generate the component:
+```sh
+node utils/script.js
+```
+
+A new file named **`Button01.txt`** will be created in the `utils/` folder. Now, you can use this component anywhere in your project.
+
+#### `Adds new components by just adding a single line of code`
+
+---
+
+##  Contributing
+We welcome contributions! Feel free to **submit issues** or **open a pull request** to improve the library.
+
+---
+
+##  License
+This project is licensed under the **MIT License**.
+
