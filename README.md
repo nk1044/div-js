@@ -20,6 +20,7 @@ Run the following command to set up the required environment:
 ```sh
 docker run -it -p 9000:9000 neerajkumar1044/divjs:01
 ```
+`UPDATE: now you don't need to run the container because it is depolyed on render but you might need to wait upto a minute to download the component or you can just change the backend url in node_modules/trydivjs to http://localhost:9000 and run the container.`
 
 ### 2️ Install the Library
 Install **DivJS** via npm:
