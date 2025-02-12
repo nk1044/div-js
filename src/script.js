@@ -6,7 +6,8 @@ import axios from 'axios';
 import { fileURLToPath } from "url";
 
 
-const SERVER_URL = 'https://divjs-02.onrender.com';
+// const SERVER_URL = 'https://divjs-02.onrender.com';
+const SERVER_URL = 'http://localhost:9000';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -36,17 +37,9 @@ const fetchData = async (name) => {
     try {
         console.log('name:', name);
         const response = await axios.get(`${SERVER_URL}/api/component/get-component?name=${name}`);
-        const content = response?.data?.data || '';
-
-        // console.log('response:', content);
-        if (!existsSync(utilsFolderPath)) {
-            await createUtilsFolder();
-        }
-        const ext = extname(name) || '.txt';
-        const filePath = join(utilsFolderPath, `${name}${ext}`);
-
-        await fs.writeFile(filePath, content, 'utf8');
-
+        // console.log('response:', response?.data);
+        await createUtilsFolder();
+        await setFolderStructure(response?.data, utilsFolderPath);
         return true;
     } catch (error) {
         console.error('Error fetching component:', error);
