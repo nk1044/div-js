@@ -1,67 +1,93 @@
-# DivJS
+# trydivJS
 
-A lightweight and modern UI library that provides ready-to-use components, templates, and boilerplates to make web development faster and easier.
+**trydivJS** is a lightweight and modern UI library that provides ready-to-use components, templates, and boilerplates to streamline web development. With trydivJS, you can integrate pre-built UI elements effortlessly, reducing development time and enhancing efficiency.
 
-## Features
-- **Reusable UI Components** – Pre-built elements to speed up development.
-- **Boilerplates** – Ready-to-use code structures for quick setup.
-- **Customizable** – Easily adaptable to fit different design needs.
-- **Lightweight & Fast** – Optimized for performance.
-- **Developer-Friendly** – Simple API and intuitive usage.
-<!-- 
-## Installation
+##  Features
 
-You can install DivJS via npm:
+- 🔹 **Reusable UI Components** – Pre-built elements to speed up development.
+- 🔹 **Boilerplates** – Ready-to-use code structures for quick project setup.
+- 🔹 **Customizable** – Easily adaptable to fit different design needs.
+- 🔹 **Lightweight & Fast** – Optimized for performance without unnecessary bloat.
+- 🔹 **Developer-Friendly** – Simple API with intuitive usage for seamless integration.
+
+---
+
+##  Installation
+
+Install trydivJS via npm:
+
 ```sh
-npm install divjs
+npm install trydivjs
 ```
 
-Or using yarn:
-```sh
-yarn add divjs
-```
+---
 
-## Usage
+##  Getting Started
 
-Import and use DivJS components in your project:
+Once you install `trydivJS` library, it will automatically create a folder `utils` in your root directory and a script.js file inside utils folder. just add **`ONE LINE`** of code and use any component you want.
 
-```js
-import { Button } from 'divjs';
-
-function App() {
-  return <Button label="Click Me" />;
-}
-``` -->
-
-<!-- ## Documentation
-For detailed usage and examples, check out our [official documentation](#). -->
 ```javascript
-import React, { useEffect, useState } from "react";
-import Ui from "your-package-name";
+// utils/script.js
+import { DivUi } from "trydivjs";
 
-export default function App() {
-    const [Button01, setButton01] = useState(null);
+const divUi = new DivUi();
 
-    useEffect(() => {
-        async function loadComponent() {
-            const Component = await Ui("Button01");
-            setButton01(() => Component);
-        }
-        loadComponent();
-    }, []);
-
-    return (
-        <div>
-            <h1>Dynamic Component Loading</h1>
-            {Button01 ? <Button01 /> : <p>Loading Button01...</p>}
-        </div>
-    );
-}
-
+// Fetch a UI component
+divUi.GetComponent("your_component");
 ```
 
-## Contributing
-We welcome contributions! Feel free to submit issues or open a pull request.
+Simply replace `your_component` with the desired component name, rerun your script.js, and let **DivJS** handle the rest!
 
-## License
-This project is licensed under the MIT License.
+---
+
+##  Available Components
+
+Easily integrate UI components using just one line of code:
+
+```javascript
+// Button component
+divUi.GetComponent("Button01");
+
+// Navbar component
+divUi.GetComponent("Navbar01");
+
+// Login page component
+divUi.GetComponent("Login01");
+```
+
+More components are available, and new ones are added regularly!
+
+---
+
+##  Documentation
+
+For detailed usage, customization options, and examples, check out our **[official documentation](#)**.
+
+---
+
+##  Contributing
+
+We welcome contributions! If you'd like to improve **DivJS**, feel free to:
+
+- Report issues
+- Submit feature requests
+- Open a pull request
+
+---
+
+##  License
+
+This project is licensed under the **MIT License** – you're free to use, modify, and distribute it under the license terms.
+
+---
+
+##  Support & Community
+
+Have questions or need help?
+
+- Open an issue on GitHub
+- Join our community discussions
+- Reach out via [email/contact details]
+
+---
+

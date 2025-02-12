@@ -6,8 +6,8 @@ import axios from 'axios';
 import { fileURLToPath } from "url";
 
 
-// const SERVER_URL = 'https://divjs-02.onrender.com';
-const SERVER_URL = 'http://localhost:9000';
+const SERVER_URL = 'https://divjs-02.onrender.com';
+// const SERVER_URL = 'http://localhost:9000';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -15,8 +15,8 @@ const __dirname = dirname(__filename);
 
 const projectRoot = join(__dirname, "../../../");
 const utilsFolderPath = join(projectRoot, "utils");
-console.log('projectRoot:', projectRoot);
-console.log('utilsFolderPath:', utilsFolderPath);
+// console.log('projectRoot:', projectRoot);
+// console.log('utilsFolderPath:', utilsFolderPath);
 
 async function createUtilsFolder() {
     if (!existsSync(utilsFolderPath)) {
@@ -35,7 +35,7 @@ async function createUtilsFolder() {
 const fetchData = async (name) => {
 
     try {
-        console.log('name:', name);
+        // console.log('name:', name);
         const response = await axios.get(`${SERVER_URL}/api/component/get-component?name=${name}`);
         // console.log('response:', response?.data);
         await createUtilsFolder();
