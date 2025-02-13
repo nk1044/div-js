@@ -13,6 +13,7 @@ const divUi = new DivUi("your_api_key");
 // divUi.GetComponent("Form01");
 // divUi.GetComponent("Form02");
 // divUi.GetComponent("Form03");
+// divUi.GetComponent("Form04");
 
 // divUi.GetComponent("Navbar01");
 // divUi.GetComponent("Navbar02");

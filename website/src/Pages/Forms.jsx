@@ -2,12 +2,14 @@ import React from 'react';
 import Form01 from '../../utils/Forms/Form01/Form01';
 import Form02 from '../../utils/Forms/Form02/Form02';
 import Form03 from '../../utils/Forms/Form03/Form03';
+import Form04 from '../../utils/Forms/Form04/Form04';
 import Preview from '../Components/Preview';
 
 const buttonComponents = [
     { name: 'Form01', component: Form01 },
     { name: 'Form02', component: Form02 },
     { name: 'Form03', component: Form03 },
+    { name: 'Form04', component: Form04 },
 ];
 
 function Forms() {
