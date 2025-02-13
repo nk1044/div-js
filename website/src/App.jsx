@@ -1,13 +1,23 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import Layout from './Pages/Layout';
+import Docs from './Pages/Docs';
+import Home from './Pages/Home';
+
+
+
+const router = createBrowserRouter([{
+  path: '/',
+  element: <Layout />,
+  children: [
+    {path: '', element: <Home />},
+    {path: 'docs', element: <Docs />},
+  ]
+}]);
+
 
 function App() {
-
-
-  return (
-    <>
-     <h1 className='text-2xl text-center font-bold'>div.js</h1>
-    </>
-  )
+  return <RouterProvider  router={router}/>;
 }
 
 export default App
