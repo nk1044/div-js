@@ -23,7 +23,7 @@ const Form01 = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 p-4 sm:p-6 lg:p-8">
+    <div className="flex w-full items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 p-4 sm:p-6 lg:p-8">
       <div className="w-full max-w-md bg-white p-6 sm:p-8 rounded-2xl shadow-xl">
         <div className="space-y-6">
           {/* Header */}

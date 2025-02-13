@@ -19,3 +19,16 @@ const divUi = new DivUi("your_api_key");
 // divUi.GetComponent("Navbar02");
 
 
+// divUi.GetComponent("Card01");
+// divUi.GetComponent("Card02");
+// divUi.GetComponent("Card03");
+// divUi.GetComponent("Card04");
+// divUi.GetComponent("Card05");
+
+
+// divUi.GetComponent("Slider01");
+// divUi.GetComponent("Slider02");
+// divUi.GetComponent("Slider03");
+// divUi.GetComponent("Slider04");
+
+

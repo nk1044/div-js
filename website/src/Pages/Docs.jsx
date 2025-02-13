@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-import Buttons from "./Buttons";
-import Forms from "./Forms";
-import Navbars from "./Navbars";
+import Buttons from "../DivUi/Buttons";
+import Forms from "../DivUi/Forms";
+import Navbars from "../DivUi/Navbars";
+import Card from "../DivUi/Card";
+import Slider from "../DivUi/Slider";
 
 const components = [
   { name: "Buttons", component: Buttons },
   { name: "Forms", component: Forms },
   { name: "Navbars", component: Navbars },
+  { name: "Card", component: Card },
+  { name: "Slider", component: Slider },
 ];
 
 function Docs() {
@@ -62,7 +66,7 @@ function Docs() {
         <h1 className="text-5xl font-extrabold text-gray-800 text-center mb-10">
           UI Components Documentation
         </h1>
-        <div className="p-8 bg-white rounded-2xl shadow-xl border border-gray-200">
+        <div className="p-8 grid grid-cols-1 place-items-center bg-white rounded-2xl shadow-xl border border-gray-200">
           {components.map(({ name, component: Component }) =>
             activeComponent === name ? <Component key={name} /> : null
           )}

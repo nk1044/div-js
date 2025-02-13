@@ -17,7 +17,7 @@ function Form04({
 
   return (
     <div
-      className="flex items-center justify-center min-h-screen p-6 transition-all duration-500"
+      className="flex items-center w-full  justify-center min-h-screen p-6 transition-all duration-500"
       style={{
         background: bgImage
           ? `url(${bgImage}) center/cover no-repeat`

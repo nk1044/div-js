@@ -16,7 +16,7 @@ function Forms() {
     return (
         <div className="flex w-full min-h-screen p-6">
             {/* Main Content */}
-            <div className="w-4/5 space-y-12">
+            <div className="w-4/5 space-y-12 ">
                 {ComponentArray.map(({ name, component: Button }, index) => (
                     <Preview
                         key={index}

@@ -14,7 +14,7 @@ function Form03() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-600 via-yellow-500 to-blue-600 p-6">
+    <div className="flex items-center w-full  justify-center min-h-screen bg-gradient-to-br from-purple-600 via-yellow-500 to-blue-600 p-6">
       <div
         className={`w-full max-w-md p-8 rounded-2xl shadow-lg bg-white/20 backdrop-blur-xl border border-white/30
         transition-all duration-700 transform ${

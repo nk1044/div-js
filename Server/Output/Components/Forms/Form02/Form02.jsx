@@ -8,7 +8,7 @@ function Form02() {
   });
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 p-6">
+    <div className="flex items-center w-full  justify-center min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 p-6">
       <div className="w-full max-w-md bg-white p-8 rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105">
         <h2 className="text-3xl font-bold text-center text-gray-700 mb-6 animate-fade-in">
           Create Account

@@ -4,7 +4,7 @@ function Navbar01() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-900 text-white p-4 shadow-md">
+    <nav className="bg-gray-900 text-white w-full p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div className="text-xl font-bold">Brand</div>
