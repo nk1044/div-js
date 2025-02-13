@@ -71,9 +71,9 @@ divUi.GetComponent("Login01");
 |-----------|-------------|
 | `Button01` | A customizable button component |
 | `Navbar01` | A responsive navigation bar |
-| `Login01`  | A login form template |
+| `Form01`  | A login form template |
 
-For a complete list of available components and customization options, check our **[official documentation](#)**.
+For a complete list of available components and customization options, check our **[official documentation](https://divjs.vercel.app/)**.
 
 ---
 
