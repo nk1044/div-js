@@ -1,16 +1,12 @@
 import React from 'react';
-import Form01 from '../../utils/Forms/Form01/Form01';
-import Form02 from '../../utils/Forms/Form02/Form02';
-import Form03 from '../../utils/Forms/Form03/Form03';
+import Navbar01 from '../../utils/Navbars/Navbar01/Navbar01';
 import Preview from '../Components/Preview';
 
 const buttonComponents = [
-    { name: 'Form01', component: Form01 },
-    { name: 'Form02', component: Form02 },
-    { name: 'Form03', component: Form03 },
+    { name: 'Navbar01', component: Navbar01 },
 ];
 
-function Forms() {
+function Navbars() {
     return (
         <div className="flex w-full min-h-screen p-8 space-x-8">
             {/* Main Content */}
@@ -44,4 +40,4 @@ function Forms() {
     );
 }
 
-export default Forms;
+export default Navbars;
