@@ -5,13 +5,17 @@ import Forms from "../DivUi/Forms";
 import Navbars from "../DivUi/Navbars";
 import Card from "../DivUi/Card";
 import Slider from "../DivUi/Slider";
+import Sidebars from "../DivUi/Sidebars";
+import Dashboards from "../DivUi/Dashboards";
 
 const components = [
+  { name: "Card", component: Card },
   { name: "Buttons", component: Buttons },
   { name: "Forms", component: Forms },
   { name: "Navbars", component: Navbars },
-  { name: "Card", component: Card },
   { name: "Slider", component: Slider },
+  { name: "Sidebars", component: Sidebars },
+  { name: "Dashboards", component: Dashboards },
 ];
 
 function Docs() {
