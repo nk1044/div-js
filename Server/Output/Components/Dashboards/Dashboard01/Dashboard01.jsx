@@ -118,15 +118,6 @@ function Dashboard01({ links = defaultProps, previewMode = false }) {
 
   return (
     <div className={`relative w-full h-screen overflow-hidden ${animationTokens.colors.backgroundGradient}`}>
-      
-      {/* Global styles for static neon glow effect */}
-      <style>
-        {`
-          .neon-glow {
-            box-shadow: 0 16px 50px rgba(0, 255, 170, 1);
-          }
-        `}
-      </style>
 
       {/* Navbar: Notch with Bubble Nav Links */}
       <motion.div
@@ -136,23 +127,13 @@ function Dashboard01({ links = defaultProps, previewMode = false }) {
         whileHover="hover"
       >
         <motion.div
-          className="bg-black bg-opacity-80 backdrop-blur-md cursor-pointer relative"
+          className="bg-black bg-opacity-80 backdrop-blur-md cursor-pointer relative rounded-2xl"
           variants={notchVariants}
-        >
-          {/* Static neon glow element: bottom border glow centered */}
-          <div 
-            className="neon-glow"
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "80%",
-              height: "5px",
-              borderRadius: "4px"
-            }}
-          />
-        </motion.div>
+          style={{
+            // Apply the glow directly as a box-shadow to the notch container.
+            boxShadow: "0 20px 60px rgba(24,204,252,1)",
+          }}
+        />
         <motion.div
           className="flex gap-4 mt-4"
           variants={bubbleContainerVariants}
@@ -161,15 +142,16 @@ function Dashboard01({ links = defaultProps, previewMode = false }) {
             <motion.a
               key={i}
               href={link.link}
-              className="bg-black text-white px-3 py-1 rounded-full text-xs shadow-md hover:bg-opacity-80"
+              className="bg-black text-white px-3 z-40 py-1 rounded-full text-xs shadow-md" // Removed hover:bg-opacity-80
               variants={bubbleVariants}
             >
               {link.name}
             </motion.a>
           ))}
+
         </motion.div>
       </motion.div>
-      
+
       {/* Animated Complex Curves Background */}
       <motion.svg
         className="absolute inset-0 w-full h-full"

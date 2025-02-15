@@ -2,12 +2,19 @@ import React from 'react';
 import Navbar01 from '../../utils/Navbars/Navbar01/Navbar01';
 import Navbar02 from '../../utils/Navbars/Navbar02/Navbar02';
 import Navbar03 from '../../utils/Navbars/Navbar03/Navbar03';
+import Navbar04 from '../../utils/Navbars/Navbar04/Navbar04';
 import Preview from '../Components/Preview';
 
 const Navbar03Preview = () => (
   <div className="relative w-full h-52 border border-dashed border-gray-400">
     {/* Set previewMode to true so the navbar is positioned absolutely within this div */}
     <Navbar03 previewMode />
+  </div>
+);
+const Navbar04Preview = () => (
+  <div className="relative w-full h-52 border border-dashed border-gray-400">
+    {/* Set previewMode to true so the navbar is positioned absolutely within this div */}
+    <Navbar04 previewMode />
   </div>
 );
 
@@ -69,6 +76,28 @@ const ComponentArray = [
   - **To generate the code automatically, add the line** 
   \`\`\`sh
   divUi.GetComponent("Navbar03")
+\`\`\`
+
+  **to script.js and run**
+
+  \`\`\`node utils/script.js\`\`\`.
+`,
+      variants: [
+        { props: {} },
+      ],
+    },
+    {
+      name: 'Navbar04',
+      component: Navbar04Preview,
+      code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Navbar04");`,
+      docs: `
+  #### Name of the component:- ***Navbar04***
+  
+  Navbar04 is a customizable component for data input.
+  
+  - **To generate the code automatically, add the line** 
+  \`\`\`sh
+  divUi.GetComponent("Navbar04")
 \`\`\`
 
   **to script.js and run**

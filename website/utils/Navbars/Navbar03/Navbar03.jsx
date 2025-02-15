@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const notchVariants = {
   initial: { width: 200, height: 30, borderRadius: "16px" },
-  hover: { width: 240, height: 40, borderRadius: "16px", transition: { duration: 0.3 } }
+  hover: { width: 240, height: 40, borderRadius: "16px", transition: { duration: 0.3 } },
 };
 
 const defaultProps = [
@@ -31,7 +31,7 @@ const bubbleVariants = {
   hover: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
 };
 
-function Navbar03({ props = defaultProps }) {
+function Navbar03({ props = defaultProps, links = defaultProps }) {
   return (
     <>
       {/* Global styles for neon glow effect */}
@@ -49,42 +49,33 @@ function Navbar03({ props = defaultProps }) {
       </style>
 
       <motion.div
-        className="absolute top-0 left-1/2 z-30 flex flex-col items-center"
-        style={{ transform: "translateX(-50%)", marginTop: "10px" }}
+        className="absolute top-0 left-1/2 z-30 pointer-events-auto flex flex-col items-center overflow-visible"
+        style={{ transform: "translateX(-50%)", marginTop: "10px", paddingBottom: "40px" }}
         initial="initial"
         whileHover="hover"
       >
-        {/* Notch container with relative positioning */}
+        {/* Notch Container with enhanced glow applied via box-shadow.
+            This container remains completely black (rounded-2xl) */}
         <motion.div
-          className="bg-black bg-opacity-80 backdrop-blur-md cursor-pointer relative"
+          className="bg-black bg-opacity-80 backdrop-blur-md cursor-pointer relative rounded-2xl"
           variants={notchVariants}
-        >
-          {/* Neon glow element: bottom border glow centered */}
-          <div 
-            className="neon-glow"
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "80%",  // Adjust the width to control the glow's horizontal extent
-              height: "5px", // Adjust the height for a thicker or thinner glow
-              borderRadius: "2px"
-            }}
-          />
-        </motion.div>
+          style={{
+            boxShadow: "0 20px 60px rgba(24,204,252,1)",
+          }}
+        />
+        {/* Bubble Nav Links */}
         <motion.div
           className="flex gap-4 mt-4"
           variants={bubbleContainerVariants}
         >
-          {props.map((prop, i) => (
+          {links.map((link, i) => (
             <motion.a
               key={i}
-              href={prop.link}
-              className="bg-black text-white px-3 py-1 rounded-full text-xs shadow-md hover:bg-opacity-80"
+              href={link.link}
+              className="bg-black text-white px-3 z-40 py-1 rounded-full text-xs shadow-md"
               variants={bubbleVariants}
             >
-              {prop.name}
+              {link.name}
             </motion.a>
           ))}
         </motion.div>
