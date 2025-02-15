@@ -36,3 +36,8 @@ const divUi = new DivUi("your_api_key");
 // divUi.GetComponent("Sidebar01");
 
 
+// divUi.GetComponent("Loader01");
+// divUi.GetComponent("Loader02");
+// divUi.GetComponent("Loader03");
+
+

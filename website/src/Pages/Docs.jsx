@@ -8,6 +8,7 @@ import Slider from "../DivUi/Slider";
 import Sidebars from "../DivUi/Sidebars";
 import Dashboards from "../DivUi/Dashboards";
 import ExpressDoc from "../DivUi/ExpressDoc";
+import Loaders from "../DivUi/Loaders";
 
 
 const components = [
@@ -18,6 +19,7 @@ const components = [
   { name: "Navbars", component: Navbars },
   { name: "Buttons", component: Buttons },
   { name: "Sidebars", component: Sidebars },
+  { name: "Loaders", component: Loaders },
   { name: "ExpressDoc", component: ExpressDoc },
 ];
 
