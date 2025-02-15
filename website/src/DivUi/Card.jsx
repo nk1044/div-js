@@ -11,41 +11,101 @@ const ComponentArray = [
     name: 'Card01',
     component: Card01,
     code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Card01");`,
-    docs: `Card01 is a versatile card component designed to display content with a modern and clean layout.
-To generate the code automatically, add the line \`divUi.GetComponent("Card01")\` to your script.js and run \`node utils/script.js\`.`,
+    docs: `
+  #### Name of the component:- ***Card01***
+  
+  Card01 is a customizable component for data input.
+  
+ - **To generate the code automatically, add the line:**
+  \`\`\`javascript
+  divUi.GetComponent("Card01")
+  \`\`\`
+**to script.js and run**
+  \`\`\`sh
+  node utils/script.js
+  \`\`\`
+  `,
     variants: [{ props: {} }],
   },
   {
     name: 'Card02',
     component: Card02,
     code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Card02");`,
-    docs: `Card02 offers a sleek design with emphasis on visual hierarchy and spacing.
-To generate the code automatically, insert \`divUi.GetComponent("Card02")\` in script.js and execute \`node utils/script.js\`.`,
+    docs: `
+  #### Name of the component:- ***Card02***
+  
+  Card02 is a customizable component for data input.
+  
+ - **To generate the code automatically, add the line:**
+  \`\`\`javascript
+  divUi.GetComponent("Card02")
+  \`\`\`
+**to script.js and run**
+  \`\`\`sh
+  node utils/script.js
+  \`\`\`
+  `,
     variants: [{ props: {} }],
   },
   {
     name: 'Card03',
     component: Card03,
     code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Card03");`,
-    docs: `Card03 features a dynamic layout ideal for showcasing images and text together.
-To auto-generate the code, add \`divUi.GetComponent("Card03")\` to script.js and run \`node utils/script.js\`.`,
+    docs: `
+  #### Name of the component:- ***Card03***
+  
+  Card03 is a customizable component for data input.
+  
+ - **To generate the code automatically, add the line:**
+  \`\`\`javascript
+  divUi.GetComponent("Card03")
+  \`\`\`
+**to script.js and run**
+  \`\`\`sh
+  node utils/script.js
+  \`\`\`
+  `,
     variants: [{ props: {} }],
   },
   {
     name: 'Card04',
     component: Card04,
     code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Card04");`,
-    docs: `Card04 provides a modern, minimalistic design for content display.
-To generate its code automatically, add \`divUi.GetComponent("Card04")\` to script.js and run \`node utils/script.js\`.`,
+    docs: `
+  #### Name of the component:- ***Card04***
+  
+  Card04 is a customizable component for data input.
+  
+ - **To generate the code automatically, add the line:**
+  \`\`\`javascript
+  divUi.GetComponent("Card04")
+  \`\`\`
+**to script.js and run**
+  \`\`\`sh
+  node utils/script.js
+  \`\`\`
+  `,
     variants: [{ props: {} }],
   },
   {
     name: 'Card05',
     component: Card05,
     code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Card05");`,
-    docs: `Card05 is a highly customizable card component ideal for a variety of content types.
-To generate the code automatically, add \`divUi.GetComponent("Card05")\` to script.js and run \`node utils/script.js\`.
-`,
+    docs: `
+  #### Name of the component:- ***Card05***
+  
+  Card05 is a customizable component for data input.
+  
+  - **To generate the code automatically, add the line:**
+
+  \`\`\`javascript
+  divUi.GetComponent("Card05")
+  \`\`\`
+  **to script.js and run:**
+  \`\`\`sh
+  node utils/script.js
+  \`\`\``,
+
     variants: [{ props: {} }],
   },
 ];

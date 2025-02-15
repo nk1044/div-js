@@ -14,7 +14,13 @@ const divUi = new DivUi();
 
 divUi.GetComponent("Slider01");`,
     docs: `Slider01 is a modern slider component designed to display content in a responsive carousel format.
-To generate the code automatically, add the line \`divUi.GetComponent("Slider01")\` to your script.js and run \`node utils/script.js\`.`,
+ - **To generate the code automatically, add the line:** 
+
+\`divUi.GetComponent("Slider01")\` 
+
+**to script.js and run**
+
+ \`node utils/script.js\`.`,
   },
   {
     name: 'Slider02',
@@ -24,7 +30,13 @@ const divUi = new DivUi();
 
 divUi.GetComponent("Slider02");`,
     docs: `Slider02 provides a sleek and interactive slider interface with smooth transitions.
-To generate the code automatically, add the line \`divUi.GetComponent("Slider02")\` to your script.js and run \`node utils/script.js\`.`,
+ - **To generate the code automatically, add the line:**
+
+\`divUi.GetComponent("Slider02")\` 
+
+**to script.js and run**
+
+ \`node utils/script.js\`.`,
   },
   {
     name: 'Slider03',
@@ -34,7 +46,13 @@ const divUi = new DivUi();
 
 divUi.GetComponent("Slider03");`,
     docs: `Slider03 offers a dynamic slider experience with advanced navigation features.
-To generate the code automatically, add the line \`divUi.GetComponent("Slider03")\` to your script.js and run \`node utils/script.js\`.`,
+ - **To generate the code automatically, add the line:**
+ 
+\`divUi.GetComponent("Slider03")\`
+
+**to script.js and run**
+
+ \`node utils/script.js\`.`,
   },
   {
     name: 'Slider04',
@@ -44,7 +62,13 @@ const divUi = new DivUi();
 
 divUi.GetComponent("Slider04");`,
     docs: `Slider04 is a highly customizable slider component ideal for showcasing featured content.
-To generate the code automatically, add the line \`divUi.GetComponent("Slider04")\` to your script.js and run \`node utils/script.js\`.`,
+ - **To generate the code automatically, add the line:**
+ 
+\`divUi.GetComponent("Slider04")\` 
+
+**to script.js and run**
+
+\`node utils/script.js\`.`,
   },
 ];
 

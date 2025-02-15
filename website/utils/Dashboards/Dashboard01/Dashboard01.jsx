@@ -112,13 +112,22 @@ const bubbleVariants = {
 
 // ----- Dashboard01 Component -----
 
-function Dashboard01({ links = defaultProps, previewMode=true }) {
+function Dashboard01({ links = defaultProps, previewMode = true }) {
   // When previewMode is true, use absolute positioning so the navbar stays inside its container.
   const navPositionClass = previewMode ? "absolute" : "fixed";
 
   return (
     <div className={`relative w-full h-screen overflow-hidden ${animationTokens.colors.backgroundGradient}`}>
       
+      {/* Global styles for static neon glow effect */}
+      <style>
+        {`
+          .neon-glow {
+            box-shadow: 0 16px 50px rgba(0, 255, 170, 1);
+          }
+        `}
+      </style>
+
       {/* Navbar: Notch with Bubble Nav Links */}
       <motion.div
         className={`${navPositionClass} top-0 left-1/2 z-30 pointer-events-auto flex flex-col items-center overflow-visible`}
@@ -127,9 +136,23 @@ function Dashboard01({ links = defaultProps, previewMode=true }) {
         whileHover="hover"
       >
         <motion.div
-          className="bg-black bg-opacity-80 backdrop-blur-md cursor-pointer"
+          className="bg-black bg-opacity-80 backdrop-blur-md cursor-pointer relative"
           variants={notchVariants}
-        />
+        >
+          {/* Static neon glow element: bottom border glow centered */}
+          <div 
+            className="neon-glow"
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "80%",
+              height: "5px",
+              borderRadius: "4px"
+            }}
+          />
+        </motion.div>
         <motion.div
           className="flex gap-4 mt-4"
           variants={bubbleContainerVariants}

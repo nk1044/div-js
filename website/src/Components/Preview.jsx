@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
 
 function Preview({ children, name, code, docs }) {
     const [activeTab, setActiveTab] = useState('preview');
+    const markdownContent = String(docs);
 
     return (
         <div id={name} className="border border-neutral-200 w-full rounded-2xl shadow-lg bg-white overflow-hidden">
@@ -61,13 +64,12 @@ function Preview({ children, name, code, docs }) {
                 {activeTab === 'docs' && (
                     <div className="bg-gray-100 p-6 rounded-lg shadow-inner my-4">
                         <h3 className="text-2xl font-semibold text-gray-800 mb-4">Documentation</h3>
-                        <pre className="whitespace-pre-wrap text-sm leading-relaxed">
-                            <code className="text-gray-800">
-                                {docs}
-                            </code>
-                        </pre>
+                        <div className="prose max-w-full">
+                        <Markdown remarkPlugins={[remarkGfm]}>{markdownContent}</Markdown>
+                    </div>
                     </div>
                 )}
+                
 
             </div>
         </div>

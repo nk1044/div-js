@@ -98,35 +98,61 @@ const bubbleContainerVariants = {
   },
 };
 
-const defaultProps= [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "Docs", link: "/docs" },
-  { name: "Contact", link: "/contact" },
-]
+const defaultProps = [
+  { name: "Home", link: "#" },
+  { name: "About", link: "#" },
+  { name: "Docs", link: "#" },
+  { name: "Contact", link: "#" },
+];
 
 const bubbleVariants = {
   initial: { opacity: 0, scale: 0.5 },
   hover: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
 };
 
-// ----- Landing Page Component -----
+// ----- Dashboard01 Component -----
 
-function Dashboard01({ links = defaultProps }) {
+function Dashboard01({ links = defaultProps, previewMode = false }) {
+  // When previewMode is true, use absolute positioning so the navbar stays inside its container.
+  const navPositionClass = previewMode ? "absolute" : "fixed";
+
   return (
     <div className={`relative w-full h-screen overflow-hidden ${animationTokens.colors.backgroundGradient}`}>
       
+      {/* Global styles for static neon glow effect */}
+      <style>
+        {`
+          .neon-glow {
+            box-shadow: 0 16px 50px rgba(0, 255, 170, 1);
+          }
+        `}
+      </style>
+
       {/* Navbar: Notch with Bubble Nav Links */}
       <motion.div
-        className="fixed top-0 left-1/2 z-30 pointer-events-auto flex flex-col items-center overflow-visible"
+        className={`${navPositionClass} top-0 left-1/2 z-30 pointer-events-auto flex flex-col items-center overflow-visible`}
         style={{ transform: "translateX(-50%)", marginTop: "10px", paddingBottom: "40px" }}
         initial="initial"
         whileHover="hover"
       >
         <motion.div
-          className="bg-black bg-opacity-80 backdrop-blur-md cursor-pointer"
+          className="bg-black bg-opacity-80 backdrop-blur-md cursor-pointer relative"
           variants={notchVariants}
-        />
+        >
+          {/* Static neon glow element: bottom border glow centered */}
+          <div 
+            className="neon-glow"
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "80%",
+              height: "5px",
+              borderRadius: "4px"
+            }}
+          />
+        </motion.div>
         <motion.div
           className="flex gap-4 mt-4"
           variants={bubbleContainerVariants}

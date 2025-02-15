@@ -16,8 +16,20 @@ const ComponentArray = [
       name: 'Navbar01',
       component: Navbar01,
       code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Navbar01");`,
-      docs: `Navbar01 is a responsive navigation bar component.
-  To generate the code automatically, add the line \`divUi.GetComponent("Navbar01")\` to script.js and run \`node utils/script.js\`.`,
+      docs: `
+  #### Name of the component:- ***Navbar01***
+  
+  Navbar01 is a customizable component for data input.
+  
+  - **To generate the code automatically, add the line:**
+
+  \`\`\`javascript
+  divUi.GetComponent("Navbar01")
+  \`\`\`
+  **to script.js and run:**
+  \`\`\`sh
+  node utils/script.js
+  \`\`\``,
       variants: [
         { props: {} },
       ],
@@ -26,8 +38,21 @@ const ComponentArray = [
       name: 'Navbar02',
       component: Navbar02,
       code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Navbar02");`,
-      docs: `Navbar02 is a modern navigation bar component with advanced features.
-  To generate the code automatically, add the line \`divUi.GetComponent("Navbar02")\` to script.js and run \`node utils/script.js\`.`,
+      docs: `
+  #### Name of the component:- ***Navbar02***
+  
+  Navbar02 is a customizable component for data input.
+  
+  - **To generate the code automatically, add the line:**
+  \`\`\`javascript
+  divUi.GetComponent("Navbar02")
+  \`\`\`
+
+  **to script.js and run:**
+
+  \`\`\`sh
+  node utils/script.js
+  \`\`\``,
       variants: [
         { props: {} },
       ],
@@ -36,8 +61,20 @@ const ComponentArray = [
       name: 'Navbar03',
       component: Navbar03Preview,
       code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Navbar03");`,
-      docs: `Navbar03 is a stylish navigation bar component with notch and bubble links.
-  To generate the code automatically, add the line \`divUi.GetComponent("Navbar03")\` to script.js and run \`node utils/script.js\`.`,
+      docs: `
+  #### Name of the component:- ***Navbar03***
+  
+  Navbar03 is a customizable component for data input.
+  
+  - **To generate the code automatically, add the line** 
+  \`\`\`sh
+  divUi.GetComponent("Navbar03")
+\`\`\`
+
+  **to script.js and run**
+
+  \`\`\`node utils/script.js\`\`\`.
+`,
       variants: [
         { props: {} },
       ],

@@ -5,47 +5,143 @@ import Form03 from '../../utils/Forms/Form03/Form03';
 import Form04 from '../../utils/Forms/Form04/Form04';
 import Preview from '../Components/Preview';
 
+// {
+//   name: 'Button01',
+//   component: Button01,
+//   code: `import { DivUi } from "trydivjs";
+// const divUi = new DivUi();
+
+// divUi.GetComponent("Button01");`,
+//   docs: `
+// ## Button01
+
+// Button01 is a customizable button component designed for modern UI interactions with multiple variants.
+
+// To generate the code automatically, add the line:
+// \`\`\`javascript
+// divUi.GetComponent("Button01")
+// \`\`\`
+// to script.js and run:
+// \`\`\`sh
+// node utils/script.js
+// \`\`\`
+
+// ---
+
+// ## **Pass these props to your component:**
+
+// | Variant              | Properties |
+// | -------------------- | ---------- |
+// | **1. Default**       | \`{}\` |
+
+// ---
+// `,
+//   variants: [
+//     { props: {} }, // default variant; extend with more variants if needed
+//   ],
+// },
+
 const ComponentArray = [
   {
     name: 'Form01',
     component: Form01,
-    code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Form01");`,
-    docs: `Form01 is a customizable form component for data input.
-To generate the code automatically, add the line \`divUi.GetComponent("Form01")\` to script.js and run \`node utils/script.js\`.`,
-    variants: [
-      { props: {} }, // default variant; extend with more variants if needed
-    ],
+    code: `import { DivUi } from "trydivjs";
+  const divUi = new DivUi();
+  
+  divUi.GetComponent("Form01");`,
+    docs: `
+  #### Name of the component:- ***Form01***
+  
+  Form01 is a customizable form component for data input.
+  
+  - **To generate the code automatically, add the line:**
+  \`\`\`javascript
+  divUi.GetComponent("Form01")
+  \`\`\`
+  **to script.js and run:**
+  \`\`\`sh
+  node utils/script.js
+  \`\`\`
+  `,
+  variants: [
+    { props: {} },
+  ],
   },
   {
     name: 'Form02',
     component: Form02,
-    code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Form02");`,
-    docs: `Form02 is a modern form component designed for sleek UI interactions.
-To generate the code automatically, add the line \`divUi.GetComponent("Form02")\` to script.js and run \`node utils/script.js\`.`,
-    variants: [
-      { props: {} },
-    ],
+    code: `import { DivUi } from "trydivjs";
+  const divUi = new DivUi();
+  
+  divUi.GetComponent("Form02");`,
+    docs: `
+  ## ## Name of the component:- ***Form02***
+  
+  Form02 is a modern form component designed for sleek UI interactions.
+  
+  - **To generate the code automatically, add the line:**
+  \`\`\`javascript
+  divUi.GetComponent("Form02")
+  \`\`\`
+  **to script.js and run:**
+  \`\`\`sh
+  node utils/script.js
+  \`\`\`
+  `,
+  variants: [
+    { props: {} },
+  ],
   },
   {
     name: 'Form03',
     component: Form03,
-    code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Form03");`,
-    docs: `Form03 is an interactive form component with enhanced validation and styling.
-To generate the code automatically, add \`divUi.GetComponent("Form03")\` to script.js and run \`node utils/script.js\`.`,
-    variants: [
-      { props: {} },
-    ],
+    code: `import { DivUi } from "trydivjs";
+  const divUi = new DivUi();
+  
+  divUi.GetComponent("Form03");`,
+    docs: `
+  ## ## Name of the component:- ***Form03***
+  
+  Form03 is an interactive form component with enhanced validation and styling.
+  
+ - **To generate the code automatically, add the line:**
+  \`\`\`javascript
+  divUi.GetComponent("Form03")
+  \`\`\`
+  to script.js and run:
+  \`\`\`sh
+  node utils/script.js
+  \`\`\`
+  `,
+  variants: [
+    { props: {} },
+  ],
   },
   {
     name: 'Form04',
     component: Form04,
-    code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Form04");`,
-    docs: `Form04 offers a streamlined, minimalist form design for quick data entry.
-To generate the code automatically, add \`divUi.GetComponent("Form04")\` to script.js and run \`node utils/script.js\`.`,
-    variants: [
-      { props: {} },
-    ],
-  },
+    code: `import { DivUi } from "trydivjs";
+  const divUi = new DivUi();
+  
+  divUi.GetComponent("Form04");`,
+    docs: `
+  ## Name of the component:- ***Form04***
+  
+  Form04 offers a streamlined, minimalist form design for quick data entry.
+  
+ - **To generate the code automatically, add the line:**
+  \`\`\`javascript
+  divUi.GetComponent("Form04")
+  \`\`\`
+  to script.js and run:
+  \`\`\`sh
+  node utils/script.js
+  \`\`\`
+  `,
+  variants: [
+    { props: {} },
+  ],
+  }  
 ];
 
 function Forms() {
@@ -58,7 +154,7 @@ function Forms() {
             <div className="flex flex-wrap w-full items-center justify-center gap-6">
               {variants.map((variant, idx) => (
                 <div key={idx} className="flex w-full flex-col items-center space-y-2">
-                  <Form {...variant.props} />
+                  <Form  />
                 </div>
               ))}
             </div>

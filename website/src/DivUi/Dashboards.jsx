@@ -11,9 +11,19 @@ const ComponentArray = [
 const divUi = new DivUi();
 
 divUi.GetComponent("Dashboard01");`,
-    docs: `Dashboard01 is a futuristic dashboard component featuring animated backgrounds, sparkles, and a dynamic navbar.  
-To generate the code automatically, add the line \`divUi.GetComponent("Dashboard01")\` to script.js and run \`node utils/script.js\`.
-
+    docs: `
+  #### Name of the component:- ***Dashboard01***
+  
+  Dashboard01 is a customizable Dashboard component for data input.
+  
+ - **To generate the code automatically, add the line:**
+  \`\`\`javascript
+  divUi.GetComponent("Dashboard01")
+  \`\`\`
+**to script.js and run**
+  \`\`\`sh
+  node utils/script.js
+  \`\`\`
 Dashboard01 is identified by the id "Dashboard01".`,
     variants: [
       {
