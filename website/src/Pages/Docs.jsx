@@ -71,11 +71,9 @@ function Docs() {
               className="ml-4 md:hidden"
               onClick={() => setIsSidebarOpen(false)}
             >
-              <img
-                src="/api/placeholder/24/24"
-                alt="Close"
-                className="w-6 h-6"
-              />
+              <div className="w-8 h-8 flex items-center justify-center border rounded-lg bg-gray-200 text-gray-800">
+                ❌
+              </div>
             </button>
           </div>
 
@@ -93,7 +91,7 @@ function Docs() {
                   } 
                   `}
               >
-                <span>Components</span>
+                <span className="overflow-hidden cursor-pointer">Components</span>
                 {isComponentsOpen ? (
                   <svg
                     className={`w-4 h-4 transition-transform ${isComponentsOpen ? 'rotate-180' : ''
@@ -134,7 +132,7 @@ function Docs() {
                     return (
                       <li key={name} className="border-b border-gray-300">
                         <button
-                          className={`w-full text-left px-5 py-3 rounded-md font-medium transition-all duration-300
+                          className={`w-full text-left cursor-pointer px-5 py-3 rounded-md font-medium transition-all duration-300
                           ${activeComponent === name
                               ? "bg-blue-600 text-white shadow-lg"
                               : "text-gray-700 hover:bg-gray-200"
@@ -155,14 +153,15 @@ function Docs() {
 
 
             <button
-              className={`w-full text-left text-2xl font-semibold p-2 rounded-md transition-all duration-300 ease-in-out
+              className={`w-full text-left text-2xl font-semibold cursor-pointer p-2 rounded-md transition-all duration-300 ease-in-out
                 ${activeComponent === 'ExpressDoc'
                   ? "bg-gradient-to-r from-gray-100 to-gray-200  shadow-md transform scale-[0.98] "
                   : "text-gray-700 hover:bg-gray-50 hover:shadow-sm hover:translate-x-1"
                 } `}
-              onClick={() => (
-                setActiveComponent("ExpressDoc")
-              )}
+              onClick={() => {
+                setActiveComponent("ExpressDoc");
+                setIsSidebarOpen(false);
+              }}
             >
               Express Starter
             </button>

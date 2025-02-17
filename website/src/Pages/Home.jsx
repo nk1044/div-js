@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
+import {HealthCheck} from '../server/server.js'
 
 function Home() {
+  useEffect(() => {
+    HealthCheck();
+  }, []);
+
+
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-neutral-900 p-6 overflow-hidden">
       <Helmet>

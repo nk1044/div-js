@@ -1,6 +1,7 @@
 import React from 'react';
 import Preview from '../Components/Preview';
 import Dashboard01 from '../../utils/Dashboards/Dashboard01/Dashboard01';
+import Dashboard02 from '../../utils/Dashboards/Dashboard02/Dashboard02';
 
 // ComponentArray for Dashboards
 const ComponentArray = [
@@ -25,6 +26,33 @@ divUi.GetComponent("Dashboard01");`,
   node utils/script.js
   \`\`\`
 Dashboard01 is identified by the id "Dashboard01".`,
+    variants: [
+      {
+        props: {}
+      }
+    ]
+  },
+  {
+    name: 'Dashboard02',
+    component: Dashboard02,
+    code: `import { DivUi } from "trydivjs";
+const divUi = new DivUi();
+
+divUi.GetComponent("Dashboard02");`,
+    docs: `
+  #### Name of the component:- ***Dashboard02***
+  
+  Dashboard02 is a customizable Dashboard component for data input.
+  
+ - **To generate the code automatically, add the line:**
+  \`\`\`javascript
+  divUi.GetComponent("Dashboard02")
+  \`\`\`
+**to script.js and run**
+  \`\`\`sh
+  node utils/script.js
+  \`\`\`
+Dashboard01 is identified by the id "Dashboard02".`,
     variants: [
       {
         props: {}

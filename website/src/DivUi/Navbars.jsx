@@ -3,6 +3,7 @@ import Navbar01 from '../../utils/Navbars/Navbar01/Navbar01';
 import Navbar02 from '../../utils/Navbars/Navbar02/Navbar02';
 import Navbar03 from '../../utils/Navbars/Navbar03/Navbar03';
 import Navbar04 from '../../utils/Navbars/Navbar04/Navbar04';
+import Navbar05 from '../../utils/Navbars/Navbar05/Navbar05';
 import Preview from '../Components/Preview';
 
 const Navbar03Preview = () => (
@@ -15,6 +16,12 @@ const Navbar04Preview = () => (
   <div className="relative w-full h-52 border border-dashed border-gray-400">
     {/* Set previewMode to true so the navbar is positioned absolutely within this div */}
     <Navbar04 previewMode />
+  </div>
+);
+const Navbar05Preview = () => (
+  <div className="relative w-full h-52 border border-dashed border-gray-400">
+    {/* Set previewMode to true so the navbar is positioned absolutely within this div */}
+    <Navbar05 previewMode />
   </div>
 );
 
@@ -98,6 +105,28 @@ const ComponentArray = [
   - **To generate the code automatically, add the line** 
   \`\`\`sh
   divUi.GetComponent("Navbar04")
+\`\`\`
+
+  **to script.js and run**
+
+  \`\`\`node utils/script.js\`\`\`.
+`,
+      variants: [
+        { props: {} },
+      ],
+    },
+    {
+      name: 'Navbar05',
+      component: Navbar05Preview,
+      code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Navbar05");`,
+      docs: `
+  #### Name of the component:- ***Navbar05***
+  
+  Navbar05 is a customizable component for data input.
+  
+  - **To generate the code automatically, add the line** 
+  \`\`\`sh
+  divUi.GetComponent("Navbar05")
 \`\`\`
 
   **to script.js and run**
