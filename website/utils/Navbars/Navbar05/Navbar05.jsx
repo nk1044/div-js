@@ -2,10 +2,10 @@
 import React from "react";
 
 const defaultLinks = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "Docs", link: "/docs" },
-  { name: "Contact", link: "/contact" },
+  { name: "Home", link: "#" },
+  { name: "About", link: "#" },
+  { name: "Docs", link: "#" },
+  { name: "Contact", link: "#" },
 ];
 
 const Navbar05 = ({ links = defaultLinks }) => {

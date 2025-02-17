@@ -123,10 +123,10 @@ const linkStyle =
 
 // Default navigation links
 const defaultProps = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "Docs", link: "/docs" },
-  { name: "Contact", link: "/contact" },
+  { name: "Home", link: "#" },
+  { name: "About", link: "#" },
+  { name: "Docs", link: "#" },
+  { name: "Contact", link: "#" },
 ];
 
 // ----- Landing Page Component -----
