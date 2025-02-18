@@ -50,7 +50,7 @@ function Home() {
 
         {/* Buttons */}
         <div className="mt-6 flex justify-center space-x-4">
-          <a href="https://github.com/NeerajKumar-1044/div-js" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gray-700 text-white rounded-lg shadow-lg hover:bg-gray-600 hover:scale-105 transition duration-300">View on GitHub</a>
+          <a href="https://github.com/nk1044/div-js" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gray-700 text-white rounded-lg shadow-lg hover:bg-gray-600 hover:scale-105 transition duration-300">View on GitHub</a>
           <Link to="/docs" className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-lg hover:bg-blue-600 hover:scale-105 transition duration-300">Read Docs</Link>
           <a href="https://www.npmjs.com/package/trydivjs" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 hover:scale-105 transition duration-300">View on npmjs</a>
         </div>
