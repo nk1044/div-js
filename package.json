@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NeerajKumar-1044/div-js.git#npm-package"
+    "url": "git+https://github.com/nk1044/div-js.git#npm-package"
   },
   "author": "Neeraj Kumar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NeerajKumar-1044/div-js/issues"
+    "url": "https://github.com/nk1044/div-js/issues"
   },
   "homepage": "https://divjs.vercel.app/",
   "dependencies": {
