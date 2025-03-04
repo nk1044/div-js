@@ -5,8 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node index.js",
     "postinstall": "node src/postinstall.js"
+  },
+  "bin": {
+    "trydivjs": "./bin/cli.js"
   },
   "repository": {
     "type": "git",

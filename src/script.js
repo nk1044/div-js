@@ -7,7 +7,6 @@ import { fileURLToPath } from "url";
 
 
 const SERVER_URL = 'https://divjs-02.onrender.com';
-// const SERVER_URL = 'http://localhost:9000';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -15,36 +14,33 @@ const __dirname = dirname(__filename);
 
 const projectRoot = join(__dirname, "../../../");
 const utilsFolderPath = join(projectRoot, "utils");
-// console.log('projectRoot:', projectRoot);
-// console.log('utilsFolderPath:', utilsFolderPath);
+
 
 async function createUtilsFolder() {
     if (!existsSync(utilsFolderPath)) {
         try {
             await mkdir(utilsFolderPath, { recursive: true });
             const {scriptContent, script_with_dev_humor} = GetScriptContent();
-            await fs.writeFile(join(utilsFolderPath, 'script.js'), scriptContent, 'utf8');
-            await fs.writeFile(join(utilsFolderPath, 'script_with_dev_humor.txt'), script_with_dev_humor, 'utf8');
-            console.log("utils folder created successfully!");
+            // await fs.writeFile(join(utilsFolderPath, 'script.js'), scriptContent, 'utf8');
+            await fs.writeFile(join(utilsFolderPath, 'dev_humor.txt'), script_with_dev_humor, 'utf8');
+            console.log("\x1b[34m\x1b[1mUtils folder created successfully!");
         } catch (error) {
-            console.error("Error creating utils folder:", error);
+            console.error("\x1b[31m\x1b[1mError creating utils folder:\x1b[0m", error);
         }
     } else {
-        // console.log("utils folder already exists.");
+        console.log("\x1b[32m\x1b[1mUtils folder already exists!\x1b[0m");
     }
 }
 
 const fetchData = async (name) => {
 
     try {
-        // console.log('name:', name);
         const response = await axios.get(`${SERVER_URL}/api/component/get-component?name=${name}`);
-        // console.log('response:', response?.data);
         await createUtilsFolder();
         await setFolderStructure(response?.data, utilsFolderPath);
         return true;
     } catch (error) {
-        console.error('Error fetching component:', error);
+        console.error('\x1b[31m\x1b[1mError fetching component\x1b[37m');
     }
 };
 
@@ -86,7 +82,6 @@ Welcome to the world of software development—where the only certainty is suffe
 }
 
 
-
 async function setFolderStructure(tree, path = '.') {
     for (const element of tree) {
         const newPath = String(join(path, element.name));
@@ -104,7 +99,14 @@ async function setFolderStructure(tree, path = '.') {
 }
 
 
+async function GetComponent(name) {
+    const filePath = await fetchData(name);
+    if (!filePath) return null;
+    console.log('\x1b[32mComponent fetched successfully!\x1b[0m');
+    return true;
+}
+
 export {
-    fetchData,
     createUtilsFolder,
+    GetComponent
 };
