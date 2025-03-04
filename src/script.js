@@ -21,9 +21,10 @@ async function createUtilsFolder() {
         try {
             await mkdir(utilsFolderPath, { recursive: true });
             const {scriptContent, script_with_dev_humor} = GetScriptContent();
-            // await fs.writeFile(join(utilsFolderPath, 'script.js'), scriptContent, 'utf8');
-            await fs.writeFile(join(utilsFolderPath, 'dev_humor.txt'), script_with_dev_humor, 'utf8');
-            console.log("\x1b[34m\x1b[1mUtils folder created successfully!");
+            
+            // Write dev humor to a more prominent location
+            await fs.writeFile(join(utilsFolderPath, 'dev_wisdom.txt'), script_with_dev_humor, 'utf8');
+            
         } catch (error) {
             console.error("\x1b[31m\x1b[1mError creating utils folder:\x1b[0m", error);
         }
@@ -75,8 +76,6 @@ Developers in general:\n
 - "AI will replace developers" — sure, right after it figures out how to center a div.\n\n
 
 Welcome to the world of software development—where the only certainty is suffering. 😈\n`;
-
-    
 
     return {scriptContent, script_with_dev_humor}; // Returning the script content because returning frustration isn't an option.
 }
