@@ -4,22 +4,15 @@ import folderImg from '/ExpressPreview.png'
 import AdminImg from '/Admin.png'
 const Component = {
     name: 'Express Starter',
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("express");`,
+    code: `npx trydivjs add express`,
     docs: `
 ## Express Starter
 
 Express Starter is a production-ready backend template with built-in authentication and MongoDB integration.
 
-- **To generate the code automatically, add the line:**
-\`\`\`javascript
-divUi.GetComponent("express")
-\`\`\`
-to script.js and run:
+- **To generate the code automatically run command:- **
 \`\`\`sh
-node utils/script.js
+npx trydivjs add express
 \`\`\`
 
 \n

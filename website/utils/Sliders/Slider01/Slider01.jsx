@@ -46,7 +46,7 @@ const CardSlider = ({ data }) => {
   return (
     <div className="relative w-full h-64 overflow-hidden">
       {/* Stronger gradient blur effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white z-20 pointer-events-none"
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white dark z-20 pointer-events-none"
            style={{
              background: 'linear-gradient(90deg, rgb(255,255,255) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 80%, rgb(255,255,255) 100%)'
            }} 

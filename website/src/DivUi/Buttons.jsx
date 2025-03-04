@@ -11,22 +11,15 @@ const ComponentArray = [
   {
     name: 'Button01',
     component: Button01,
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("Button01");`,
+    code: `npx trydivjs add Button01`,
     docs: `
 ## Button01
 
 Button01 is a customizable button component designed for modern UI interactions with multiple variants.
 
- - **To generate the code automatically, add the line:**
-\`\`\`javascript
-divUi.GetComponent("Button01")
-\`\`\`
-to script.js and run:
+ - **To generate the code automatically, run the command:-**
 \`\`\`sh
-node utils/script.js
+npx trydivjs add Button01
 \`\`\`
 
 ---
@@ -62,22 +55,15 @@ For Aqua Burst variant:
   {
     name: 'Button02',
     component: Button02,
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("Button02");`,
+    code: `npx trydivjs add Button02`,
     docs: `
 ## Button02
 
 Button02 offers an animated background gradient along with customizable styles.
 
- - **To generate the code automatically, add the line:**
-\`\`\`javascript
-divUi.GetComponent("Button02")
-\`\`\`
-to script.js and run:
+- **To generate the code automatically, run the command:-**
 \`\`\`sh
-node utils/script.js
+npx trydivjs add Button02
 \`\`\`
 
 ---
@@ -107,22 +93,15 @@ For Aqua Burst variant:
   {
     name: 'Button03',
     component: Button03,
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("Button03");`,
+    code: `npx trydivjs add Button03`,
     docs: `
 ## Button03
 
 Button03 features dynamic gradients and pulse effects.
 
- - **To generate the code automatically, add the line:**
-\`\`\`javascript
-divUi.GetComponent("Button03")
-\`\`\`
-to script.js and run:
+- **To generate the code automatically, run the command:-**
 \`\`\`sh
-node utils/script.js
+npx trydivjs add Button03
 \`\`\`
 
 ---
@@ -167,22 +146,15 @@ For Aqua Pulse variant:
   {
     name: 'Button04',
     component: Button04,
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("Button04");`,
+    code: `npx trydivjs add Button04`,
     docs: `
 ## Button04
 
 Button04 offers sleek, modern gradients for stylish UI.
 
- - **To generate the code automatically, add the line:**
-\`\`\`javascript
-divUi.GetComponent("Button04")
-\`\`\`
-to script.js and run:
+- **To generate the code automatically, run the command:-**
 \`\`\`sh
-node utils/script.js
+npx trydivjs add Button04
 \`\`\`
 
 ---
@@ -224,22 +196,15 @@ For Sunset Glow variant:
   {
     name: 'Button05',
     component: Button05,
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("Button05");`,
+    code: `npx trydivjs add Button05`,
     docs: `
 ## Button05
 
 Button05 is a dynamic button that transitions between text and image on hover.
 
- - **To generate the code automatically, add the line:**
-\`\`\`javascript
-divUi.GetComponent("Button05")
-\`\`\`
-to script.js and run:
+- **To generate the code automatically, run the command:-**
 \`\`\`sh
-node utils/script.js
+npx trydivjs add Button05
 \`\`\`
 
 ---
@@ -275,22 +240,15 @@ For Vibrant Sunset variant:
   {
     name: 'Button06',
     component: Button06,
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("Button06");`,
+    code: `npx trydivjs add Button06`,
     docs: `
 ## Button06
 
 Button06 is a sleek, modern button with a subtle animated background effect.
 
- - **To generate the code automatically, add the line:**
-\`\`\`javascript
-divUi.GetComponent("Button06")
-\`\`\`
-to script.js and run:
+- **To generate the code automatically, run the command:-**
 \`\`\`sh
-node utils/script.js
+npx trydivjs add Button06
 \`\`\`
 
 ---
@@ -350,12 +308,12 @@ function Buttons() {
       
       {/* Sidebar */}
       <div className="sm:w-1/5 w-full sm:block hidden pl-4">
-        <div className="border border-neutral-300 rounded-xl shadow-lg p-6 bg-white sticky top-8">
-          <h2 className="text-xl font-semibold text-neutral-700 mb-4">Buttons List</h2>
+        <div className="border border-neutral-300 rounded-xl shadow-lg p-6 bg-white sticky dark:border-neutral-700 dark:bg-neutral-900 top-8">
+          <h2 className="text-xl font-semibold text-neutral-700 dark:text-neutral-400 mb-4">Buttons List</h2>
           <ul className="space-y-3">
             {ComponentArray.map(({ name }, index) => (
               <li key={index}>
-                <a href={`#${name}`} className="text-blue-500 hover:underline">
+                <a href={`#${name}`} className="text-blue-500 dark:text-orange-700 hover:underline">
                   {name}
                 </a>
               </li>

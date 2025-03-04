@@ -29,20 +29,16 @@ const ComponentArray = [
     {
       name: 'Navbar01',
       component: Navbar01,
-      code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Navbar01");`,
+      code: `npx trydivjs add Navbar01`,
       docs: `
   #### Name of the component:- ***Navbar01***
   
   Navbar01 is a customizable component for data input.
   
-  - **To generate the code automatically, add the line:**
+  - **To generate the code automatically, run the command:-**
 
-  \`\`\`javascript
-  divUi.GetComponent("Navbar01")
-  \`\`\`
-  **to script.js and run:**
   \`\`\`sh
-  node utils/script.js
+npx trydivjs add Navbar01
   \`\`\``,
       variants: [
         { props: {} },
@@ -51,21 +47,16 @@ const ComponentArray = [
     {
       name: 'Navbar02',
       component: Navbar02,
-      code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Navbar02");`,
+      code: `npx trydivjs add Navbar02`,
       docs: `
   #### Name of the component:- ***Navbar02***
   
   Navbar02 is a customizable component for data input.
   
-  - **To generate the code automatically, add the line:**
-  \`\`\`javascript
-  divUi.GetComponent("Navbar02")
-  \`\`\`
-
-  **to script.js and run:**
+  - **To generate the code automatically, run the command:-**
 
   \`\`\`sh
-  node utils/script.js
+  npx trydivjs add Navbar02
   \`\`\``,
       variants: [
         { props: {} },
@@ -74,20 +65,17 @@ const ComponentArray = [
     {
       name: 'Navbar03',
       component: Navbar03Preview,
-      code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Navbar03");`,
+      code: `npx trydivjs add Navbar03`,
       docs: `
   #### Name of the component:- ***Navbar03***
   
   Navbar03 is a customizable component for data input.
   
-  - **To generate the code automatically, add the line** 
+  - **To generate the code automatically, run the command:-** 
   \`\`\`sh
-  divUi.GetComponent("Navbar03")
+npx trydivjs add Navbar03
 \`\`\`
 
-  **to script.js and run**
-
-  \`\`\`node utils/script.js\`\`\`.
 `,
       variants: [
         { props: {} },
@@ -96,20 +84,17 @@ const ComponentArray = [
     {
       name: 'Navbar04',
       component: Navbar04Preview,
-      code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Navbar04");`,
+      code: `npx trydivjs add Navbar04`,
       docs: `
   #### Name of the component:- ***Navbar04***
   
   Navbar04 is a customizable component for data input.
   
-  - **To generate the code automatically, add the line** 
+  - **To generate the code automatically, run the command:-** 
   \`\`\`sh
-  divUi.GetComponent("Navbar04")
+npx trydivjs add Navbar04
 \`\`\`
 
-  **to script.js and run**
-
-  \`\`\`node utils/script.js\`\`\`.
 `,
       variants: [
         { props: {} },
@@ -118,20 +103,16 @@ const ComponentArray = [
     {
       name: 'Navbar05',
       component: Navbar05Preview,
-      code: `import { DivUi } from "trydivjs";\nconst divUi = new DivUi();\n\ndivUi.GetComponent("Navbar05");`,
+      code: `npx trydivjs add Navbar05`,
       docs: `
   #### Name of the component:- ***Navbar05***
   
   Navbar05 is a customizable component for data input.
   
-  - **To generate the code automatically, add the line** 
+  - **To generate the code automatically, run the command:-** 
   \`\`\`sh
-  divUi.GetComponent("Navbar05")
+npx trydivjs add Navbar05
 \`\`\`
-
-  **to script.js and run**
-
-  \`\`\`node utils/script.js\`\`\`.
 `,
       variants: [
         { props: {} },
@@ -166,12 +147,12 @@ function Navbars() {
       
       {/* Sidebar */}
       <div className="sm:w-1/5 w-full sm:block hidden pl-4">
-        <div className="border border-neutral-300 rounded-xl shadow-lg p-6 bg-white sticky top-8">
-          <h2 className="text-xl font-semibold text-neutral-700 mb-4">Buttons List</h2>
+        <div className="border border-neutral-300 rounded-xl shadow-lg p-6 bg-white dark:border-neutral-700 dark:bg-neutral-900 sticky top-8">
+          <h2 className="text-xl font-semibold text-neutral-700 dark:text-neutral-400 mb-4">Buttons List</h2>
           <ul className="space-y-3">
             {ComponentArray.map(({ name }, index) => (
               <li key={index}>
-                <a href={`#${name}`} className="text-blue-500 hover:underline">
+                <a href={`#${name}`} className="text-blue-500 dark:text-orange-700 hover:underline">
                   {name}
                 </a>
               </li>

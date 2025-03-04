@@ -8,22 +8,15 @@ const ComponentArray = [
   {
     name: 'Loader01',
     component: Loader01,
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("Loader01");`,
+    code: `npx trydivjs add Loader01`,
     docs: `
 ## Loader01
 
 Loader01 is a customizable Loader component designed for modern UI interactions with multiple variants.
 
- - **To generate the code automatically, add the line:**
-\`\`\`javascript
-divUi.GetComponent("Loader01")
-\`\`\`
-to script.js and run:
+ - **To generate the code automatically, run the command:- **
 \`\`\`sh
-node utils/script.js
+npx trydivjs add Loader01
 \`\`\`
 
 ---
@@ -57,22 +50,15 @@ For **Red** color variant:
   {
     name: 'Loader02',
     component: Loader02,
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("Loader02");`,
+    code: `npx trydivjs add Loader02`,
     docs: `
 ## Loader02
 
 Loader02 is a customizable Loader component designed for modern UI interactions with multiple variants.
 
- - **To generate the code automatically, add the line:**
-\`\`\`javascript
-divUi.GetComponent("Loader02")
-\`\`\`
-to script.js and run:
+ - **To generate the code automatically, run the command:- **
 \`\`\`sh
-node utils/script.js
+npx trydivjs add Loader02
 \`\`\`
 
 ---
@@ -90,22 +76,15 @@ For **Red** color variant:
   {
     name: 'Loader03',
     component: Loader03,
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("Loader03");`,
+    code: `npx trydivjs add Loader03`,
     docs: `
 ## Loader03
 
 Loader03 is a customizable Loader component designed for modern UI interactions with multiple variants.
 
- - **To generate the code automatically, add the line:**
-\`\`\`javascript
-divUi.GetComponent("Loader03")
-\`\`\`
-to script.js and run:
+ - **To generate the code automatically, run the command:- **
 \`\`\`sh
-node utils/script.js
+npx trydivjs add Loader03
 \`\`\`
 
 ---
@@ -165,12 +144,12 @@ function Loaders() {
       
       {/* Sidebar */}
       <div className="sm:w-1/5 w-full sm:block hidden pl-4">
-        <div className="border border-neutral-300 rounded-xl shadow-lg p-6 bg-white sticky top-8">
-          <h2 className="text-xl font-semibold text-neutral-700 mb-4">Buttons List</h2>
+        <div className="border border-neutral-300 rounded-xl shadow-lg p-6 dark:border-neutral-700 dark:bg-neutral-900 bg-white sticky top-8">
+          <h2 className="text-xl font-semibold text-neutral-700 dark:text-neutral-400 mb-4">Buttons List</h2>
           <ul className="space-y-3">
             {ComponentArray.map(({ name }, index) => (
               <li key={index}>
-                <a href={`#${name}`} className="text-blue-500 hover:underline">
+                <a href={`#${name}`} className="text-blue-500 dark:text-orange-700 hover:underline">
                   {name}
                 </a>
               </li>

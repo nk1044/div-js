@@ -34,21 +34,14 @@ const sidebarTree = [
     {
       name: 'Sidebar01',
       component: SidebarPreview,
-      code: `import { DivUi } from "trydivjs";
-  const divUi = new DivUi();
-  
-  divUi.GetComponent("Sidebar01");`,
+      code: `npx trydivjs add Sidebar01`,
       docs: `
   **Sidebar01** is a comprehensive documentation sidebar component that renders a navigation tree.
   
-  - **To generate the code automatically, add the line** 
+  - **To generate the code automatically, run the command:-** 
   \`\`\`sh
-  divUi.GetComponent("Sidebar01")
+  npx trydivjs add Sidebar01
 \`\`\`
-
-  **to script.js and run**
-
-  \`\`\`node utils/script.js\`\`\`.
 
 ---
   # **The sidebar expects a **\`tree\`** prop in the following structure:**
@@ -84,12 +77,12 @@ const sidebarTree = [
 
 function Sidebars() {
   return (
-    <div className="flex flex-col sm:flex-row w-full min-h-screen p-2 space-y-6 sm:space-y-0">
+    <div className="flex flex-col sm:flex-row w-full min-h-screen p-2 space-y-6 sm:space-y-0 dark:bg-neutral-900">
       {/* Main Content */}
       <div className="sm:w-4/5 w-full space-y-12">
         {ComponentArray.map(({ name, component: Sidebar, variants, code, docs }, index) => (
           <Preview key={index} name={name} code={code} docs={docs}>
-            <div className="flex flex-wrap w-full items-center justify-center gap-6">
+            <div className="flex flex-wrap w-full items-center dark:bg-neutral-900 justify-center gap-6">
               {variants.map((variant, idx) => (
                 <div key={idx} className="flex w-full h-[80vh] overflow-auto flex-col items-center space-y-2">
                 <Sidebar {...variant.props} />
@@ -102,12 +95,12 @@ function Sidebars() {
       
       {/* Sidebar */}
       <div className="sm:w-1/5 w-full sm:block hidden pl-4">
-        <div className="border border-neutral-300 rounded-xl shadow-lg p-6 bg-white sticky top-8">
-          <h2 className="text-xl font-semibold text-neutral-700 mb-4">Forms List</h2>
+        <div className="border border-neutral-300 rounded-xl shadow-lg p-6 bg-white dark:border-neutral-700 dark:bg-neutral-900 sticky top-8">
+          <h2 className="text-xl font-semibold text-neutral-700 dark:text-neutral-400 mb-4">Forms List</h2>
           <ul className="space-y-3">
             {ComponentArray.map(({ name }, index) => (
               <li key={index}>
-                <a href={`#${name}`} className="text-blue-500 hover:underline">
+                <a href={`#${name}`} className="text-blue-500 dark:text-orange-700 hover:underline">
                   {name}
                 </a>
               </li>

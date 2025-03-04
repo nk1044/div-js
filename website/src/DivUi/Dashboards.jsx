@@ -8,22 +8,15 @@ const ComponentArray = [
   {
     name: 'Dashboard01',
     component: Dashboard01,
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("Dashboard01");`,
+    code: `npx trydivjs add Dashboard01`,
     docs: `
   #### Name of the component:- ***Dashboard01***
   
   Dashboard01 is a customizable Dashboard component for data input.
   
- - **To generate the code automatically, add the line:**
-  \`\`\`javascript
-  divUi.GetComponent("Dashboard01")
-  \`\`\`
-**to script.js and run**
+ - **To generate the code automatically, run the command:- **
   \`\`\`sh
-  node utils/script.js
+npx trydivjs add Dashboard01
   \`\`\`
 Dashboard01 is identified by the id "Dashboard01".`,
     variants: [
@@ -35,24 +28,17 @@ Dashboard01 is identified by the id "Dashboard01".`,
   {
     name: 'Dashboard02',
     component: Dashboard02,
-    code: `import { DivUi } from "trydivjs";
-const divUi = new DivUi();
-
-divUi.GetComponent("Dashboard02");`,
+    code: `npx trydivjs add Dashboard02`,
     docs: `
   #### Name of the component:- ***Dashboard02***
   
   Dashboard02 is a customizable Dashboard component for data input.
   
- - **To generate the code automatically, add the line:**
-  \`\`\`javascript
-  divUi.GetComponent("Dashboard02")
-  \`\`\`
-**to script.js and run**
+ - **To generate the code automatically, run the command:- **
   \`\`\`sh
-  node utils/script.js
+npx trydivjs add Dashboard02
   \`\`\`
-Dashboard01 is identified by the id "Dashboard02".`,
+Dashboard02 is identified by the id "Dashboard02".`,
     variants: [
       {
         props: {}
@@ -81,12 +67,12 @@ function Dashboards() {
       
       {/* Sidebar */}
       <div className="sm:w-1/5 w-full sm:block hidden pl-4">
-        <div className="border border-neutral-300 rounded-xl shadow-lg p-6 bg-white sticky top-8">
-          <h2 className="text-xl font-semibold text-neutral-700 mb-4">Dashboards List</h2>
+        <div className="border border-neutral-300 rounded-xl shadow-lg p-6 bg-white dark:border-neutral-700 dark:bg-neutral-900 sticky top-8">
+          <h2 className="text-xl font-semibold text-neutral-700 dark:text-neutral-400 mb-4">Dashboards List</h2>
           <ul className="space-y-3">
             {ComponentArray.map(({ name }, index) => (
               <li key={index}>
-                <a href={`#${name}`} className="text-blue-500 hover:underline">
+                <a href={`#${name}`} className="text-blue-500 dark:text-orange-700 hover:underline">
                   {name}
                 </a>
               </li>
