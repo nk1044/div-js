@@ -1,0 +1,53 @@
+Windows users, brace yourselves:
+
+- Your PC will restart just as you finally fix a bug you've been debugging for 6 hours.
+
+- Windows Update: the only thing in life that's unavoidable besides death and taxes.
+
+- Clicking "Remind me later" on updates? Congratulations, you now have a second job.
+
+- Task Manager crashes while trying to close an unresponsive program—oh, the irony.
+
+- "Not Responding" is not a status; it’s a Windows lifestyle.
+
+- Your Wi-Fi adapter goes missing like a deadbeat dad—there one moment, gone the next.
+
+- Enjoy the suspense of a "Preparing Windows" screen that prepares you for nothing but regret.
+
+
+
+Linux users, let's be real:
+
+- Rebooting is for the weak.
+
+- Your OS is stable—until you touch anything related to Nvidia drivers.
+
+- "Arch is the best!" — said every Arch user, right before spending 3 hours fixing a dependency issue.
+
+- You didn't install Linux, you signed up for a life of manually fixing everything.
+
+- Half your time is spent evangelizing Linux to people who will never use it.
+
+
+
+Developers in general:
+
+- "It works on my machine" is the battle cry of broken deployments everywhere.
+
+- Stack Overflow isn’t a tool—it’s your entire personality.
+
+- "Just one more fix" is how you end up debugging at 4 AM with existential dread.
+
+- The only thing that crashes more than your code is your will to live.
+
+- If comments are documentation, then your codebase is an ancient scroll written in a lost language.
+
+- Git commit messages range from "fixed stuff" to "I have no idea what’s happening anymore."
+
+- Debugging is just staring at the screen until the error message magically makes sense.
+
+- "AI will replace developers" — sure, right after it figures out how to center a div.
+
+
+
+Welcome to the world of software development—where the only certainty is suffering. 😈
