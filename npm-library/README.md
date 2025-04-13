@@ -1,7 +1,3 @@
-Below is an updated version of your README that reflects the new behavior:
-
----
-
 # trydivJS
 
 **trydivJS** is a modern, lightweight, and efficient UI library designed to streamline web development. It offers a rich collection of pre-built UI components, templates, and boilerplates, enabling developers to build high-quality user interfaces with minimal effort. With the latest update, trydivJS now generates a `utils/` folder for component management and provides a simple CLI command to add components directly.
