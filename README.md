@@ -1,118 +1,115 @@
 # trydivJS
 
-**trydivJS** is a powerful and lightweight UI library designed to simplify web development. It provides a vast collection of ready-to-use components, templates, and boilerplates, enabling developers to accelerate project development with minimal effort.
-
-***website: [trydivjs](https://divjs.vercel.app/)***
-
-***dockerhub: [neerajkumar1044](https://hub.docker.com/repository/docker/neerajkumar1044/divjs/general)***
+**trydivJS** is a modern, lightweight, and efficient UI library designed to streamline web development. It offers a rich collection of pre-built UI components, templates, and boilerplates, enabling developers to build high-quality user interfaces with minimal effort. With the latest update, trydivJS now generates a `utils/` folder for component management and provides a simple CLI command to add components directly.
 
 ---
 
-##  Key Features
+## Official Links
 
--  **Pre-built UI Components** – Easily integrate customizable UI elements.
--  **Optimized Performance** – Lightweight with fast rendering.
--  **Boilerplates & Templates** – Quick setup with minimal configuration.
--  **Developer-Friendly** – Intuitive API with simple usage.
--  **Extensible & Flexible** – Customizable for various design needs.
+- **Website**: [trydivJS](https://divjs.vercel.app/)
+- **DockerHub**: [neerajkumar1044](https://hub.docker.com/repository/docker/neerajkumar1044/divjs/general)
+- **GitHub Repository**: [trydivJS GitHub](https://github.com/nk1044/div-js)
+- **Documentation**: [trydivJS Docs](https://divjs.vercel.app/)
 
 ---
 
-##  Installation
+## Key Features
 
-### 1️ Install via npm
+- 🔹 **Pre-built UI Components** – Quickly integrate customizable UI elements.
+- 🔹 **Optimized Performance** – Enjoy fast, lightweight rendering for a seamless user experience.
+- 🔹 **Boilerplates & Templates** – Jumpstart your projects with ready-to-use structures.
+- 🔹 **Developer-Friendly CLI** – Easily add components via the CLI.
+- 🔹 **Customizable & Extensible** – Tweak generated files to fit your project’s design.
+- 🔹 **Cross-Browser Compatibility** – Works flawlessly across all modern web browsers.
+- 🔹 **Active Community Support** – Benefit from regular updates and community-driven enhancements.
+
+---
+
+## Installation
+
+Install trydivJS as a development dependency via npm:
 
 ```sh
-npm install trydivjs
+npm install trydivjs --save-dev
 ```
 
-### 2️ Getting Started
+---
 
-Upon installation, `trydivJS` automatically creates a `utils/` directory in your project root with a `script.js` file inside. This simplifies integration and component management.
+## Getting Started
 
-####  Importing and Using Components
+After installing `trydivJS`, the library automatically generates a `utils/` folder in your project root. You don’t need to run any script manually—the CLI takes care of component generation.
 
-```javascript
-// utils/script.js
-import { DivUi } from "trydivjs";
-
-const divUi = new DivUi();
-
-// Load a UI component
-divUi.GetComponent("your_component");
-```
-
-Replace `your_component` with the required component name, run your script, and let **trydivJS** do the rest!
-
-####  Running the Script
-
-To generate the component, execute:
+To add any UI component, simply run:
 
 ```sh
-node utils/script.js
+npx trydivjs add <component_name>
 ```
 
-This will create a new file **`your_component.txt`** inside the `utils/` folder, ready for use in your project.
+Replace `<component_name>` with the name of the desired component.
 
-####  Adding New Components
+### Example
 
-Simply add a new line to fetch additional components:
+To add the `Card01` component, run:
 
-```javascript
-// Fetch multiple components
-divUi.GetComponent("Button01");
-divUi.GetComponent("Navbar01");
-divUi.GetComponent("Login01");
+```sh
+npx trydivjs add Card01
 ```
 
 ---
 
-##  Full Documentation
+## Available Components
 
-### Available Components
+Here are some example components you can add:
 
-| Component | Description |
-|-----------|-------------|
-| `Button01` | A customizable button component |
-| `Navbar01` | A responsive navigation bar |
-| `Form01`  | A login form template |
+| Component   | Description                                      |
+|-------------|--------------------------------------------------|
+| **Card01**  | A modern, customizable card component.         |
+| **Card02**  | An alternative card style with extra flair.    |
+| **Button01**| A sleek and responsive button component.       |
+| **Loader01**| A lightweight loader/spinner component.          |
+| **Form01**  | A pre-built form template for user input.        |
+| **Navbar03**| A responsive and stylish navigation bar.         |
+| **Sidebar02**| A collapsible sidebar to enhance your UI.       |
 
-For a complete list of available components and customization options, check our **[official documentation](https://divjs.vercel.app/)**.
-
----
-
-##  Customization
-
-Each component is designed to be easily customizable. Modify the generated component files in `utils/` to fit your design preferences.
+For a full list of components and customization options, please refer to the **[official documentation](https://divjs.vercel.app/)**.
 
 ---
 
-##  Contributing
+## Customization
 
-We welcome community contributions! If you'd like to enhance **trydivJS**, consider:
+Each generated component file is fully customizable. Simply modify the files in the `utils/` folder to adjust styles, colors, layouts, and more according to your project’s needs.
 
-- Submitting bug reports
+---
+
+## Contributing
+
+We welcome contributions! Help improve **trydivJS** by:
+
+- Reporting issues
 - Requesting new features
-- Creating a pull request with improvements
+- Submitting pull requests
 
-For contribution guidelines, refer to our **[CONTRIBUTING.md](#)**.
-
----
-
-##  License
-
-This project is distributed under the **MIT License**, allowing open use, modification, and distribution.
+For contribution guidelines, see our **[CONTRIBUTING.md](https://github.com/nk1044/div-js/main/CONTRIBUTING.md)**.
 
 ---
 
-##  Need Help?
+## License
+
+This project is licensed under the **MIT License**, which allows open use, modification, and distribution.
+
+---
+
+## Need Help?
 
 For support and discussions:
-- Open an issue on GitHub
-- Join our developer community
-- Contact us via [email/contact details]
+
+- **GitHub Issues**: [Report an issue](https://github.com/nk1044/div-js)
+- **Community Discussions**: [Join the conversation](https://github.com/nk1044/div-js/discussions)
 
 ---
 
-**Start Building with trydivJS Today**
+### Start Building with trydivJS Today!
 
+---
+
+This updated README now reflects the new CLI-based workflow—users only need to run `npx trydivjs add <component_name>` to add a component, and the library will generate the necessary `utils/` folder without creating a separate `script.js` file.
